@@ -1,6 +1,7 @@
 package org.example.model;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -20,11 +21,15 @@ public class PerformanceLogger {
      * @param inputSize el tamaño de la entrada al algoritmo
      * @param executionTime el tiempo de ejecución del algoritmo en nanosegundos
      */
-    public static void logPerformance(String algorithmName, int inputSize, long executionTime) {
+    public static void registrarRendimientoA(int inputSize, String algorithmName, long executionTime) {
         // Utiliza try-with-resources para asegurar que el BufferedWriter se cierre después de su uso
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
-            // Escribe los datos de rendimiento en el archivo
-            writer.write(String.format("%s, %d, %d\n", algorithmName, inputSize, executionTime));
+            // Escribe los encabezados si el archivo está vacío
+            if (new File(FILE_NAME).length() == 0) {
+                writer.write("Matriz Size        Algorithm            Execution Time (ms)\n");
+            }
+            // Escribe los datos de rendimiento en el archivo con formato adecuado
+            writer.write(String.format("%-15d %-30s %-15d\n", inputSize, algorithmName, executionTime));
         } catch (IOException e) {
             // Imprime la traza de pila para cualquier IOException
             e.printStackTrace();

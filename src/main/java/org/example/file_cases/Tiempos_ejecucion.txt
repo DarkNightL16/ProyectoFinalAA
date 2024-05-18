@@ -1,15 +1,61 @@
-NaivOnArray , 64, 16
-NaivLoopUnrollingTwo , 64, 0
-NaivLoopUnrollingFour , 64, 20
-WinogradOriginal , 64, 10
-WinogradScaled , 64, 1
-StrassenNaiv , 64, 7
-StrassenWinograd , 64, 4
-III.3SequentialBlock , 64, 11
-III.4ParallelBlock , 64, 23
-III.5EnhanchedParallelBlock , 64, 25
-IV.3SequentialBlock , 64, 3
-IV.4ParallelBlock , 64, 24
-IV.5EnhanchedParallelBlock , 64, 13
-V.3SequentialBlock , 64, 8
-V.4ParallelBlock , 64, 5
+Matriz Size        Algorithm            Execution Time (ms)
+64              NaivOnArray                    7              
+64              NaivLoopUnrollingTwo           7              
+64              NaivLoopUnrollingFour          25             
+64              WinogradOriginal               8              
+64              WinogradScaled                 5              
+64              StrassenNaiv                   8              
+64              StrassenWinograd               7              
+64              III.3SequentialBlock           7              
+64              III.4ParallelBlock             16             
+64              III.5EnhanchedParallelBlock    16             
+64              IV.3SequentialBlock            11             
+64              IV.4ParallelBlock              13             
+64              IV.5EnhanchedParallelBlock     10             
+64              V.3SequentialBlock             11             
+64              V.4ParallelBlock               14             
+128             NaivOnArray                    3              
+128             NaivLoopUnrollingTwo           5              
+128             NaivLoopUnrollingFour          4              
+128             WinogradOriginal               5              
+128             WinogradScaled                 6              
+128             StrassenNaiv                   16             
+128             StrassenWinograd               25             
+128             III.3SequentialBlock           11             
+128             III.4ParallelBlock             10             
+128             III.5EnhanchedParallelBlock    20             
+128             IV.3SequentialBlock            8              
+128             IV.4ParallelBlock              21             
+128             IV.5EnhanchedParallelBlock     7              
+128             V.3SequentialBlock             16             
+128             V.4ParallelBlock               6              
+256             NaivOnArray                    78             
+256             NaivLoopUnrollingTwo           41             
+256             NaivLoopUnrollingFour          41             
+256             WinogradOriginal               28             
+256             WinogradScaled                 34             
+256             StrassenNaiv                   153            
+256             StrassenWinograd               70             
+256             III.3SequentialBlock           21             
+256             III.4ParallelBlock             26             
+256             III.5EnhanchedParallelBlock    37             
+256             IV.3SequentialBlock            14             
+256             IV.4ParallelBlock              13             
+256             IV.5EnhanchedParallelBlock     29             
+256             V.3SequentialBlock             31             
+256             V.4ParallelBlock               34             
+512             NaivOnArray                    398            
+512             NaivLoopUnrollingTwo           201            
+512             NaivLoopUnrollingFour          200            
+512             WinogradOriginal               191            
+512             WinogradScaled                 184            
+512             StrassenNaiv                   302            
+512             StrassenWinograd               363            
+512             III.3SequentialBlock           175            
+512             III.4ParallelBlock             149            
+512             III.5EnhanchedParallelBlock    90             
+512             IV.3SequentialBlock            92             
+512             IV.4ParallelBlock              99             
+512             IV.5EnhanchedParallelBlock     53             
+512             V.3SequentialBlock             328            
+512             V.4ParallelBlock               337            
